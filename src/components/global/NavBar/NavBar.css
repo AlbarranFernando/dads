@@ -8,7 +8,6 @@
     color:green;    
 } 
 
-
 header {
     
     background: rgba(100, 0, 100, .5);
@@ -33,11 +32,8 @@ header nav ul li a {
     display: flex;
   }
 
+  Carro {
+    position: relative;
+  }
 
-  header nav ul li:first-child {
-    margin-left: 0;
-  }
-  
-  header nav ul li:last-child {
-    margin-right: 0;
-  }
+ 

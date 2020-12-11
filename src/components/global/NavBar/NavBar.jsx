@@ -1,5 +1,6 @@
-
 import './NavBar.css';
+import CartWidget from '../CartWidget/CartWidget'
+
 function NavBar(){
 return (
     <>
@@ -30,6 +31,9 @@ return (
 
 
 
+            </div>
+            <div className="Carro">
+            < CartWidget />
             </div>
         </header>
     </>
