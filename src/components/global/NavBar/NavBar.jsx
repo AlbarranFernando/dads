@@ -26,15 +26,17 @@ return (
                                 <a href='#'>Variedades</a>
                             </li>
                         </ul>
+
+                        
+                        < CartWidget />
+                     
                     </nav>
 
 
 
 
             </div>
-            <div className="Carro">
-            < CartWidget />
-            </div>
+
         </header>
     </>
 )
