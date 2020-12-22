@@ -26,13 +26,9 @@ return (
                                 <a href='#'>Variedades</a>
                             </li>
                         </ul>
-
-                        
                         < CartWidget />
                      
                     </nav>
-
-
 
 
             </div>
