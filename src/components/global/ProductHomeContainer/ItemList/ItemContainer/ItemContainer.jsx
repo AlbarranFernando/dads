@@ -5,7 +5,7 @@ import ItemCount from './ItemCount/ItemCount'
 const ItemContainer =({img, producto, precio, cant}) => {
     
    return (
-               
+
                
                 <article className="Container">
                     <img src={img} alt="foto producto"/>
