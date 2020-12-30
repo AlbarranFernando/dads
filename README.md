@@ -3,7 +3,7 @@
 _[ESP] Proyecto de e-commerce realizado con React JS  y Firebase
 
 ## Screenshots
-![DADSDrugstore](https://github.com/AlbarranFernando/dads/dadsDrugstore.gif)
+![DADSDrugstore](https://github.com/AlbarranFernando/dads/blob/main/dadsDrugstore.gif)
 
 # Getting Started with Create React App
 
