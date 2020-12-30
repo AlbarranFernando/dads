@@ -1,5 +1,5 @@
 const ItemDetail = ({item}) => {
-    console.log(item.id)
+
      return ( 
         <article>
             <h1>{item.producto}</h1>

@@ -1,9 +1,12 @@
+
 .titulo-principal{
     font-family: "Fredoka One", cursive;
     font-size: 3rem;
     color:red;
     margin: 0;
-}
+ }
+
+
 
 .subtitulo {
     font-size: 1.5rem;
@@ -22,13 +25,15 @@ header .conHeader {
     align-items: center;
     position: relative;
   }
-  header nav ul li a {
-      margin-right :3rem;
+  header nav ul li{
+    height: 2rem;
+
   }
-header nav ul li a {
+header nav ul li p {
     color: Black;
-    font-size: 1.5rem;
+    font-size: 2rem;
     position: relative;
+    margin: 0rem 3rem;
   }
 
   header nav ul {
@@ -38,5 +43,9 @@ header nav ul li a {
   Carro {
     position: relative;
   }
-
- 
+  a {
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }

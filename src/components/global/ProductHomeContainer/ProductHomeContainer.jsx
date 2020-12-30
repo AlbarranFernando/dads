@@ -1,12 +1,14 @@
 import './ProductHomeContainer.css'
 import ItemList from './ItemList/ItemList'
-import ItemDetailContainer from './ItemDetailContainer/ItemDetailContainer'
+import {useParams} from 'react-router-dom';
 
 function ProductHomeContainer() {
+    
+    const {cate} = useParams();
+ 
     return (
-        <>
-        <ItemDetailContainer />
-        {/* <ItemList /> */}
+        <>        
+           <ItemList catsel={cate}/>
         </>
     );
 }

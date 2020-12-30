@@ -19,3 +19,19 @@
     line-height: 0;
     color:white;
   }
+  .navCart:hover .widget{
+     
+    display: block; 
+    
+  }
+
+  .widget{
+    height: 30rem;
+    width: 300%;  
+    position: absolute;
+    right: 0rem;
+    top:4rem;
+    background-color:hsl(172, 86%, 39%);
+    border-color:black;
+    display: none;
+  }

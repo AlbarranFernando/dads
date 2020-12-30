@@ -1,5 +1,6 @@
 import  { useState } from "react";
 
+
 const ItemCount =({cant}) => {
     const [count, setCount] = useState(0);
     const qty = cant;
@@ -19,11 +20,13 @@ const ItemCount =({cant}) => {
       };  
 
     return (
+                
                     <div className="BotCont">
                         <button onClick={() => add()}>+</button> 
                         <span>{count}</span>   
                         <button  onClick={() => sub()}>-</button>    
                     </div>
+                     
     )
 }
 
