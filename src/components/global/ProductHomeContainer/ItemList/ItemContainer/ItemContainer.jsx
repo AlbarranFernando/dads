@@ -12,7 +12,7 @@ const ItemContainer =({idd, img, producto, precio, cant}) => {
                     <img src={img} alt="foto producto"/>
                   </Link>
                     <h4>{producto}</h4>
-                    <h4>{precio}</h4>
+                    <h4>$ {precio}</h4>
                     <ItemCount cant={cant}/>
                     
                 </article>

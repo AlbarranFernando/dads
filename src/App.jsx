@@ -3,6 +3,7 @@ import './components/global/NavBar/NavBar';
 import NavBar from './components/global/NavBar/NavBar';
 import ProductHomeContainer from './components/global/ProductHomeContainer/ProductHomeContainer'
 import ItemDetailContainer from './components/global/ProductHomeContainer/ItemDetailContainer/ItemDetailContainer'
+import Cart from './components/global/Cart/Cart';
 import Error404 from './components/global/Error404';
 //import logoDads from './assets/dona2.png';
 //<img src={logoDads} alt="logo dads drugstore"/>
@@ -25,6 +26,9 @@ function App() {
           <Route exact path="/category/:cate">
               <ProductHomeContainer />
           </Route>
+          <Route exact path="/cart">
+              <Cart />
+          </Route>        
           <Route path="*">
           <Error404 />
           </Route>
