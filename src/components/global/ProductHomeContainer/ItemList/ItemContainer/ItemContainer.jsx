@@ -1,9 +1,8 @@
 import  { useState } from "react"
 import './ItemContainer.css'
-import ItemCount from './ItemCount/ItemCount'
 import{Link} from 'react-router-dom'
 
-const ItemContainer =({idd, img, producto, precio, cant}) => {
+const ItemContainer =({idd, img, producto, precio}) => {
     
    return (
                

@@ -1,6 +1,6 @@
 [
 {
-    "id": "1",
+    "id": 1,
     "img":"https://placehold.it/200x200",
     "categoria":"golosinas",
     "producto":"Galletas",
@@ -9,7 +9,7 @@
     "descripcion":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores voluptatum, incidunt mollitia odio, blanditiis fugit nesciunt placeat dolores id nihil dignissimos inventore earum eveniet ad eum impedit, sapiente beatae quaerat!rem  "
 },
 {
-    "id": "2",
+    "id": 2,
     "img":"https://placehold.it/200x200",
     "categoria":"golosinas",
     "producto":"Caramelos",
@@ -18,7 +18,7 @@
     "descripcion":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores voluptatum, incidunt mollitia odio, blanditiis fugit nesciunt placeat dolores id nihil dignissimos inventore earum eveniet ad eum impedit, sapiente beatae quaerat!rem  "
 },
 {
-    "id": "3",
+    "id": 3,
     "img":"https://placehold.it/200x200",
     "categoria":"golosinas",
     "producto":"Chicles",
