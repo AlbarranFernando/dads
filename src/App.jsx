@@ -13,7 +13,7 @@ import {CartContext} from './store';
 
 function App() {
   const [data, setData] = useState({
-    items: [],
+    cesta: {items: [], qty:[]},
     quantity:[],
     cantidad: 0,
   })
