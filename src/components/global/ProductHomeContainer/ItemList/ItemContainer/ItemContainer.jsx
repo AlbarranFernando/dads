@@ -2,7 +2,7 @@ import  { useState } from "react"
 import './ItemContainer.css'
 import{Link} from 'react-router-dom'
 
-const ItemContainer =({idd, img, producto, precio}) => {
+const ItemContainer =({id,idd, img, producto, precio}) => {
     
    return (
                
@@ -12,7 +12,7 @@ const ItemContainer =({idd, img, producto, precio}) => {
                   
                     <h4>{producto}</h4>
                     <h4>$ {precio}</h4>
-                    <Link to={`/detail/${idd}`}>
+                    <Link to={`/detail/${id}`}>
                     <button>Ver Detalles</button>
                     </Link>
                                        

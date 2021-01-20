@@ -1,45 +1,53 @@
 import './ItemList.css'
 import ItemContainer from './ItemContainer/ItemContainer'
 import  { useState, useEffect } from "react"
-import dadsJson from '../../dadsJson.json';
+import {getFirestore} from '../../../../db';
 
 const ItemList = ({catsel="all"}) => {
 
-    let filterDetail = []
+    let db = getFirestore();
+    const [itemsB, setItemsB] = useState([]);
     
-    //Busqueda del producto seleccionado
-    if (catsel !== "all") filterDetail = dadsJson.filter(it =>  it.categoria === catsel)
-    else filterDetail = dadsJson 
+    let compa
+    if (catsel == "all") (compa ='!=')
+    else (compa ='==')
 
-     //////////////////////////////
+    
+    const getProducstFromDB = () => {
+        db.collection('productos').where('categoria', compa , catsel ).get()
+        .then(docs => {
+            let arr = [];
+            docs.forEach(doc => {
+                arr.push({id: doc.id, data: doc.data()})
+            })
+            setItemsB(arr);
+        })
+        .catch(e => console.log(e));
+        
+    }
+   
+    useEffect(() => {
+        getProducstFromDB();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [catsel])
 
-
-
-
-
-const [items, setItems] = useState([]);
-
-const lookProd = new Promise((resolve, reject) => {
-    setTimeout(() => {
-        resolve(filterDetail);
-      }, 1000)
-  })
-
-  useEffect(() => {
-    lookProd.then(rta => setItems(rta));
-  
-}, [catsel])
 
     return ( 
         
-        items.length ?
+        itemsB.length ?
         <>        
         <ul>
             {
-            items.map((item) => (
+            itemsB.map((item) => (
 
-                    <li key={item.id} >
-                        <ItemContainer idd={item.id} img={item.img} producto={item.producto} precio={item.precio} cant={item.cant} />
+                    <li key={item.data.id} >
+                        <ItemContainer 
+                            id={item.id}
+                            idd={item.data.id} 
+                            img={item.data.img} 
+                            producto={item.data.producto} 
+                            precio={item.data.precio} 
+                            cant={item.data.cant} />
                     </li>
             ))
             }         

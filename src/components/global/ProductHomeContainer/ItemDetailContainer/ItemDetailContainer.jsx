@@ -1,35 +1,35 @@
 import  { useState, useEffect } from "react"
 import {useParams} from 'react-router-dom';
 import ItemDetail from './ItemDetail'
-import dadsJson from '../../dadsJson.json';
-
+//import dadsJson from '../../dadsJson.json';
+import {getFirestore} from '../../../../db';
 
 const ItemDetailContainer = () => {
 
 const {idd} = useParams();
-  
-     //Busqueda del producto seleccionado
-    const findDetail = dadsJson.find(it =>  it.id == idd);
-  
-    //////////////////////////////
-
 const [detail, setDetail] = useState(null);
-const lookProd = new Promise((resolve, reject) => {
-    setTimeout(() => {
-        resolve(findDetail)
-      }, 1000)
-  });
+let db = getFirestore();
 
-  useEffect(() => {
-    lookProd
-    .then(rta => setDetail(rta)) //{const arta.filter(rta.id==='1') (setDetail(arta))})
-    .catch(error => console.log(error));
+const getProducstFromDB = () => {
+    db.collection('productos').doc(idd).get()
+    .then(doc => {
+        if(doc.exists) {
+            setDetail({id: doc.id, data: doc.data()});
+        }
+    })
+    .catch(e => console.log(e));
+}
+
+useEffect(() => {
+    getProducstFromDB();
+    
 }, [])
+
 
     return ( 
         detail ?
         <>
-          <ItemDetail item={detail} />
+          <ItemDetail item={detail.data} />
          </>
       
         : <h3>CARGANDO PRODUCTO.......</h3>
