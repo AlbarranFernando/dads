@@ -11,11 +11,17 @@ const ItemDetail = ({item}) => {
     const [count, setCount] = useState(1);
     const [cartOrProducts, setCartOrProducts] = useState(true);
     const [data, setData] = useContext(CartContext);
-
+    
       
     function handleCart(){
-    
-     if  (data.cesta.items.indexOf(item) === -1)
+        let inProd=-1
+        data.cesta.items.map(
+            (ren)=>{
+                if(ren.id==item.id) {inProd=ren.id}
+            }
+        )
+
+     if  (inProd === -1)
      {
         setData({
             ...data, 
@@ -25,17 +31,18 @@ const ItemDetail = ({item}) => {
                 items:[...data.cesta.items,item], 
                 qty:[...data.cesta.qty,count]},
 
-            quantity:[...data.quantity, count]
+            quantity:[...data.quantity, count],
+            precTotal: data.precTotal +(item.precio * count),
         }); 
     }
         else {
-            let inProd = data.cesta.items.indexOf(item)
             data.cesta.qty.splice( inProd, 1, data.cesta.qty[inProd] + count )
             data.quantity.splice( inProd, 1, data.quantity[inProd] + count )
 
         setData({
             ...data, 
             cantidad: data.cantidad + count,
+            precTotal: data.precTotal +(item.precio * count),
         }); 
         }
 
@@ -55,9 +62,9 @@ const ItemDetail = ({item}) => {
             <p>Precio:   ${item.precio}</p>
            
             <div className="BotCont">
-                        <button onClick={() => {if (count < item.cant) setCount(count + 1)}}>+</button> 
+                        <button  onClick={() => {if (count > 1) setCount(count - 1)}}>-</button>  
                         <span>{count}</span>   
-                        <button  onClick={() => {if (count > 1) setCount(count - 1)}}>-</button>    
+                        <button onClick={() => {if (count < item.cant) setCount(count + 1)}}>+</button>   
             </div>
             
             

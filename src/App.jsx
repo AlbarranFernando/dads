@@ -5,6 +5,7 @@ import NavBar from './components/global/NavBar/NavBar';
 import ProductHomeContainer from './components/global/ProductHomeContainer/ProductHomeContainer'
 import ItemDetailContainer from './components/global/ProductHomeContainer/ItemDetailContainer/ItemDetailContainer'
 import Cart from './components/global/Cart/Cart';
+import CheckOut from './components/global/Cart/CheckOut/CheckOut';
 import Error404 from './components/global/Error404';
 //import logoDads from './assets/dona2.png';
 //<img src={logoDads} alt="logo dads drugstore"/>
@@ -16,6 +17,7 @@ function App() {
     cesta: {items: [], qty:[]},
     quantity:[],
     cantidad: 0,
+    precTotal:0,
   })
 
   return (
@@ -35,7 +37,10 @@ function App() {
           </Route>
           <Route exact path="/cart">
               <Cart />
-          </Route>        
+          </Route>   
+          <Route exact path="/checkout">
+              <CheckOut />
+          </Route>      
           <Route path="*">
           <Error404 />
           </Route>

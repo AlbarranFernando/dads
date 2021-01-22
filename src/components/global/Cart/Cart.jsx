@@ -1,14 +1,23 @@
 import {useState, useContext} from 'react';
+import {useHistory , Link} from 'react-router-dom';
 import {CartContext} from '../../../store';
 
 const Carrito = () => {
-
-    const [data ] = useContext(CartContext);
-    let precTotal=0 
+    const history = useHistory();    
+    const [data,setData] = useContext(CartContext);
     
-    for (let i = 0; i<data.cesta.items.length ;i++){
-        precTotal=precTotal + data.cesta.items[i].precio * data.cesta.qty[i] ;
-          }
+/*     let precSuma=0 
+        for (let i = 0; i<data.cesta.items.length ;i++){
+        precSuma=precSuma + data.cesta.items[i].precio * data.cesta.qty[i] ;
+          } */
+             
+/*           setData({
+           // ...data,
+           // precTotal:precSuma
+          });
+ */
+
+
 
     return ( 
         <>
@@ -16,12 +25,20 @@ const Carrito = () => {
             
             {data.cesta.items.map((fat,i) => 
 
-            <h2>{fat.producto}(${fat.precio})   {data.cesta.qty[i]} <button onClick={() => {console.log(fat.id)}}>-</button></h2>
+            <h2>
+                {fat.producto}(${fat.precio})   
+                {data.cesta.qty[i]} 
+                <button onClick={() => {console.log(fat.id)}}>-</button>
+            </h2>
 
             )}
         
             <h3> Total de productos:{data.cantidad}</h3>
-            <h3> Precio Total:{precTotal} </h3>    
+            <h3> Precio Total:{data.precTotal} </h3>    
+            <h2>
+                <button onClick={() => history.push("/checkout")}>Terminar Compra</button>
+                <button onClick={()=>history.push("/") }>Seguir Comprando</button>
+            </h2>
         </>
 
     )

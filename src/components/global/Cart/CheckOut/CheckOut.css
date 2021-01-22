@@ -1,0 +1,11 @@
+.checkout form input {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+  }
+
+  .checkout{
+      margin-left: 3rem;
+  }
