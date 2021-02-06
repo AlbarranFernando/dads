@@ -8,6 +8,7 @@ import Cart from './components/global/Cart/Cart';
 import CheckOut from './components/global/Cart/CheckOut/CheckOut';
 import Error404 from './components/global/Error404';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
+import Footer from './components/global/Footer';
 import {CartContext} from './store';
 
 function App() {
@@ -42,7 +43,8 @@ function App() {
           <Route path="*">
           <Error404 />
           </Route>
-        </Switch>      
+        </Switch>    
+        <Footer />  
       </BrowserRouter>
       </CartContext.Provider>
   );

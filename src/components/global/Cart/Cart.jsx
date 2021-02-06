@@ -44,8 +44,8 @@ const Carrito = () => {
 
             )}
         
-            <h3 className="titCar"> Total de productos:{data.cantidad}</h3>
-            <h3 className="titCar"> Precio Total:{data.precTotal} </h3>    
+            <h3 className="titCar"> Total de productos: {data.cantidad}</h3>
+            <h3 className="titCar"> Precio Total: ${data.precTotal} </h3>    
             <h2>
                 <button disabled={data.cantidad < 1 ? 'disabled' : null } onClick={() => history.push("/checkout")}>Terminar Compra</button>
                 <button onClick={()=>history.push("/") }>Seguir Comprando</button>

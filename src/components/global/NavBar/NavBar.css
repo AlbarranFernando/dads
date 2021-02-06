@@ -7,27 +7,32 @@
     margin: 0;
  }
 
-
+.titSub{
+  display: flex;
+  align-items: baseline;
+  margin-left: 1rem;
+}
 
 .subtitulo {
     font-size: 2rem;
     color:#21410b;  
     text-shadow: 2px 4px 10px rgb(97, 4, 81) ; 
     margin: 0; 
+    margin-left: 3rem;
 } 
 
 header {
     position: fixed;
     width: 100%;
     top: 0;
-    height: 12rem;
+    height: 9rem;
    
     background: rgba(170, 78, 170, .88);
     filter:drop-shadow(4px 6px 25px rgb(36, 10, 155))
       }
 
 header .conHeader {
-    display: flex;
+    
     flex-direction: column;
     align-items: center;
     position: relative;
@@ -50,10 +55,7 @@ header .conHeader {
     display: flex;
   }
 
-  Carro {
-    position: relative;
-    
-      }
+  
   a {
     text-decoration: none;
   }

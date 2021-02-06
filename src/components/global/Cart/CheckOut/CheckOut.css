@@ -1,3 +1,6 @@
+.checkout div h2 {
+margin: 0
+}
 .checkout form input {
     margin-top: 0.6rem;
     margin-bottom: 0.6rem;
@@ -13,7 +16,7 @@
   .checkout{
       margin-left: 3rem;
       text-align:center;
-      margin: 14rem 20rem;
+      margin: 11rem 20rem 2rem 20rem;
       padding-bottom:1rem;
       background-color: rgba(68, 204, 113, 0.4);
       border-radius: 10px;
@@ -38,7 +41,7 @@
 .buttVal{
     height: 3rem;
     width: 12rem;
-    margin-bottom:3rem;
+    margin-bottom:1.8rem;
 }
 .buttVal button{
 height: 3rem;

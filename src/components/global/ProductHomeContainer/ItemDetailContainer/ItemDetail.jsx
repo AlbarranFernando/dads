@@ -78,7 +78,6 @@ const ItemDetail = ({item}) => {
                 </div>
                 
                 
-                <br/>
                 {
                 cartOrProducts ?
                 <button onClick={handleCart}>Agregar al carrito</button> :

@@ -9,10 +9,14 @@ return (
     <>
         <header>
             <div className="conHeader">
-                <NavLink to={"/"}>
-                 <h1 activeClassName="selectedLink"className="titulo-principal">DADS DRUGSTORE</h1>
-                </NavLink >
-                 <p className="subtitulo"  >Venta de Variedades</p>
+                
+                 <div className="titSub">
+                 <NavLink to={"/"}>    
+                    <h1 activeClassName="selectedLink"className="titulo-principal">DADS DRUGSTORE</h1>
+                    </NavLink >   
+                    <p className="subtitulo"  >Venta de Variedades</p>
+                 </div>   
+                
                     <nav>
                         <ul>
                             <li>
