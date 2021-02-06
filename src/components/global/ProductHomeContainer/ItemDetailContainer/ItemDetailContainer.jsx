@@ -16,7 +16,7 @@ const getProducstFromDB = () => {
         if(doc.exists) {
             setDetail({id: doc.id, data: doc.data()});
         }
-    })
+    }) //eslint-disable-next-line react-hooks/exhaustive-deps
     .catch(e => console.log(e));
 }
 

@@ -1,46 +1,49 @@
 import './NavBar.css';
 import CartWidget from './CartWidget/CartWidget'
-import{Link} from 'react-router-dom'
+import{Link, NavLink} from 'react-router-dom'
 
 function NavBar(){
+   
+
 return (
     <>
         <header>
             <div className="conHeader">
-                <Link to={"/"}>
-                 <h1 className="titulo-principal">DADS DRUGSTORE</h1>
-                </Link >
+                <NavLink to={"/"}>
+                 <h1 activeClassName="selectedLink"className="titulo-principal">DADS DRUGSTORE</h1>
+                </NavLink >
                  <p className="subtitulo"  >Venta de Variedades</p>
                     <nav>
                         <ul>
                             <li>
-                                <Link to={"/category/golosinas"}>
-                                <p>Golosinas</p>
-                                </Link >
+                                <NavLink to={"/category/golosinas"}>
+                                <p className="asff" activeClassName="selectedLink" >Golosinas</p>
+                                </NavLink >
                             </li>
                             <li>
-                                <Link to={"/category/gaseosas"}>
-                                <p>Gaseosas</p>
-                                </Link >
+                                <NavLink to={"/category/gaseosas"}>
+                                <p activeClassName="selectedLink">Gaseosas</p>
+                                </NavLink >
                             </li>
                             <li>
-                                <Link to={"/category/cervezas"}>
-                                <p>Cervezas</p>
-                                </Link >
+                                <NavLink to={"/category/cervezas"}>
+                                <p activeClassName="selectedLink">Cervezas</p>
+                                </NavLink >
                             </li>
                             <li>
-                                <Link to={"/category/almacen"}>
-                                <p>Almacen</p>
-                                </Link >
+                                <NavLink to={"/category/almacen"}>
+                                <p activeClassName="selectedLink">Almacen</p>
+                                </NavLink >
                             </li>
                             <li>
-                                <Link to={"/category/variedades"}>
-                                <p>Variedades</p>
-                                </Link >
+                                <NavLink to={"/category/variedades"}>
+                                <p activeClassName="selectedLink">Variedades</p>
+                                </NavLink >
                             </li>
                         </ul>
+                        <Link to={"/cart"}>
                         < CartWidget />
-                     
+                        </Link>
                     </nav>
 
 

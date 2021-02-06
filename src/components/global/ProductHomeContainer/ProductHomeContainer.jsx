@@ -7,7 +7,7 @@ function ProductHomeContainer() {
     const {cate} = useParams();
  
     return (
-        <>        
+        <>     
            <ItemList catsel={cate}/>
         </>
     );

@@ -1,7 +1,6 @@
 import {useState, useContext} from 'react';
 import {CartContext} from '../../../../store';
 import {getFirestore} from '../../../../db';
-import firebase from 'firebase/app';
 import './CheckOut.css'
 
 const Checkout = () => {
@@ -15,6 +14,7 @@ const Checkout = () => {
         nombre: '',
         apellido: '',
         email: '',
+        repemail:'',
         telefono: '',
     })
     const clearCart=()=>{
@@ -29,14 +29,19 @@ const Checkout = () => {
 
     const handleChange = (e) => {
     setClientData({...clientData, [e.target.name]: e.target.value});
+          
     }
+
+    
 
     let factura ={
         client: clientData,
-        items: data.cesta.items ,
-        precio: data.precTotal,
+        items: data.cesta ,
+        price: data.precTotal,
+        date: Date(),
+        state: 'GENERADA'
         }
-        console.log(factura.client)
+      
 
 
     const handleGetForm = (e) => {
@@ -54,7 +59,7 @@ const Checkout = () => {
 return (
     <section className="checkout">
         <div>
-            <h2>Checkout</h2>
+            <h2>CHECKOUT</h2>
 
             {
                 !ventOk ?
@@ -62,11 +67,24 @@ return (
                     <input type="text" value={clientData.nombre} onChange={handleChange} name="nombre" placeholder="Nombre" />
                     <input type="text" value={clientData.apellido} onChange={handleChange} name="apellido" placeholder="Apellido" />
                     <input type="email" value={clientData.email} onChange={handleChange} name="email" placeholder="E-mail" />
+                    <input type="email" value={clientData.repemail} onChange={handleChange} name="repemail" placeholder="Repite el E-mail" />
                     <input type="tel" value={clientData.tel} onChange={handleChange} name="telefono" placeholder="Teléfono" />
                     
-                    <button>Pagar</button>
+                    <button 
+                    disabled=
+                    {Object.values(clientData).indexOf("")!==-1 
+                    || 
+                    clientData.email !== clientData.repemail 
+                    ?'disable' 
+                    : null 
+                    }>Pagar</button>
+
                 </form> :
-                <p>Felicitaciones!! El codigo de tu compra es: {idCompra}</p>
+                <div>
+                    <p>Felicitaciones!! El codigo de tu compra es:</p>
+                    <br></br>
+                    <p className="codComp">{idCompra}</p>
+                </div>
             }
         </div>
     </section>

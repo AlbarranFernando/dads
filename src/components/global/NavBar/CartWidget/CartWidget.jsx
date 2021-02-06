@@ -1,10 +1,10 @@
-import {useState, useContext} from 'react';
+import { useContext} from 'react';
 import {CartContext} from '../../../../store';
 import { TiShoppingCart } from 'react-icons/ti';
 import './CartWidget.css';
 
 function  CartWidget()  {
-    const [data, setData] = useContext(CartContext);
+    const [data ] = useContext(CartContext);
    
     return ( 
        
@@ -13,19 +13,20 @@ function  CartWidget()  {
                <TiShoppingCart size={80} color="red"  />
                <span>{data.cantidad}</span>
 
-               <div>
+            <div>
                {data.cesta.items.length ?
-            <p className="widget">
+                <p className="widget">
                     <h2>Carrito</h2>
                      {data.cesta.items.map((fat,i) => 
 
                     <h4>{data.cesta.qty[i]} {fat.producto}</h4>
 
                     )}
-            </p>
-            :<p></p>
+                    <h3>Total ${data.precTotal}</h3>
+                </p>
+                :<p></p>
             }
-        </div>
+            </div>
         </div>
 
         </>

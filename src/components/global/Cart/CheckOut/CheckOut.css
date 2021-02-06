@@ -1,11 +1,48 @@
 .checkout form input {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-top: 0.6rem;
+    margin-bottom: 0.6rem;
     display: flex;
     flex-direction: column;
-    width: 30%;
+    height: 2rem;
+    border-radius: 5px;
+    font-size:1.5rem;
+    font-style:italic;
+    width: 60%;
   }
 
   .checkout{
       margin-left: 3rem;
+      text-align:center;
+      margin: 14rem 20rem;
+      padding-bottom:1rem;
+      background-color: rgba(68, 204, 113, 0.4);
+      border-radius: 10px;
+      box-shadow: 0px 10px 10px -6px  rgb(36, 10, 155);
+      font-style:italic;
+
+
+      font-style:italic;
+      color:rgb(60, 34, 75);
+      font-size: 1.6rem;
+      font-weight:700; 
+      text-shadow: 4px 6px 10px  rgb(2, 75, 32);
   }
+  
+.checkout form{
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+.checkout form button{
+height: 3rem;
+width: 12rem;
+}
+
+.checkout .codComp{
+    font-size: 2.7rem;
+    color:rgb(248, 255, 247);
+}

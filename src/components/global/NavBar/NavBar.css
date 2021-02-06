@@ -1,22 +1,29 @@
 
 .titulo-principal{
     font-family: "Fredoka One", cursive;
-    font-size: 3rem;
-    color:red;
+    text-shadow: 2px 4px 10px rgb(97, 4, 81) ;
+    font-size: 3.5rem;
+    color:#331ccb;;
     margin: 0;
  }
 
 
 
 .subtitulo {
-    font-size: 1.5rem;
-    color:green;   
+    font-size: 2rem;
+    color:#21410b;  
+    text-shadow: 2px 4px 10px rgb(97, 4, 81) ; 
     margin: 0; 
 } 
 
 header {
-    
-    background: rgba(100, 0, 100, .5);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 12rem;
+   
+    background: rgba(170, 78, 170, .88);
+    filter:drop-shadow(4px 6px 25px rgb(36, 10, 155))
       }
 
 header .conHeader {
@@ -29,12 +36,15 @@ header .conHeader {
     height: 2rem;
 
   }
-header nav ul li p {
+  header nav ul li p{
+    margin: 0rem 3rem;}
+
+  header nav ul li a {
     color: Black;
+    text-shadow: 2px 4px 10px rgb(97, 4, 81) ;
     font-size: 2rem;
     position: relative;
-    margin: 0rem 3rem;
-  }
+     }
 
   header nav ul {
     display: flex;
@@ -42,10 +52,21 @@ header nav ul li p {
 
   Carro {
     position: relative;
-  }
+    
+      }
   a {
     text-decoration: none;
   }
   a:hover {
     text-decoration: underline;
+  }
+
+  .active{
+    font-size: 2.1rem;
+    font-weight:700; 
+    text-shadow: 4px 6px 4px  rgb(97, 4, 81) !important;
+  }
+
+  .selectedLink{
+    font-size: 5rem;
   }

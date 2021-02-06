@@ -7,8 +7,6 @@ import ItemDetailContainer from './components/global/ProductHomeContainer/ItemDe
 import Cart from './components/global/Cart/Cart';
 import CheckOut from './components/global/Cart/CheckOut/CheckOut';
 import Error404 from './components/global/Error404';
-//import logoDads from './assets/dona2.png';
-//<img src={logoDads} alt="logo dads drugstore"/>
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import {CartContext} from './store';
 

@@ -1,3 +1,9 @@
 li {
+   
     list-style:none;
+}
+body{
+    margin-top: 12rem;
+    background: rgba(67, 101, 196, 0.88);
+    
 }
