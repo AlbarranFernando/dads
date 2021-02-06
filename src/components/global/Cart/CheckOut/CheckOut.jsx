@@ -70,15 +70,19 @@ return (
                     <input type="email" value={clientData.repemail} onChange={handleChange} name="repemail" placeholder="Repite el E-mail" />
                     <input type="tel" value={clientData.tel} onChange={handleChange} name="telefono" placeholder="Teléfono" />
                     
-                    <button 
-                    disabled=
-                    {Object.values(clientData).indexOf("")!==-1 
-                    || 
-                    clientData.email !== clientData.repemail 
-                    ?'disable' 
-                    : null 
-                    }>Pagar</button>
 
+                    <div className="buttVal">
+                        <div className="msgVal">Debe llenar todos los campos y los emails deben se iguales</div> 
+                        <button 
+                        disabled=
+                        {Object.values(clientData).indexOf("")!==-1 
+                        || 
+                        clientData.email !== clientData.repemail 
+                        ?'disable' 
+                        : null 
+                        }>Pagar</button>
+                         
+                    </div>       
                 </form> :
                 <div>
                     <p>Felicitaciones!! El codigo de tu compra es:</p>
