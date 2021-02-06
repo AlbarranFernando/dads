@@ -7,10 +7,10 @@ const ItemList = ({catsel="all"}) => {
 
     let db = getFirestore();
     const [itemsB, setItemsB] = useState([]);
-    
+    console.log(catsel)
     let compa
-    if (catsel == "all") (compa ='!=')
-    else (compa ='===')
+    if (catsel === "all") (compa ='!=')
+    else (compa ='==')
         
     const getProducstFromDB = () => {
         db.collection('productos').where('categoria', compa , catsel ).get()

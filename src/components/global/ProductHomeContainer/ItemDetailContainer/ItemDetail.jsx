@@ -13,13 +13,12 @@ const ItemDetail = ({item}) => {
 
       
     function handleCart(){
-        let inProd=-1
-        let aux = data.cesta.items.map( // eslint-disable-next-line react-hooks/exhaustive-deps
+        let inProd=-1;
+        data.cesta.items.map( 
             (ren,i)=>{
-                if(ren.id===item.id) {inProd=i}
-                
-            }
-        )
+                if(ren.id===item.id) inProd=i
+                return null
+        });
 
      if  (inProd === -1)
      {
