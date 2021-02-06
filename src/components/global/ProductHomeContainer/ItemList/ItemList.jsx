@@ -10,7 +10,7 @@ const ItemList = ({catsel="all"}) => {
     
     let compa
     if (catsel == "all") (compa ='!=')
-    else (compa ='==')
+    else (compa ='===')
         
     const getProducstFromDB = () => {
         db.collection('productos').where('categoria', compa , catsel ).get()

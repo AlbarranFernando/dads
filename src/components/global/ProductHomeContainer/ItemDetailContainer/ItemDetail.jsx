@@ -14,9 +14,10 @@ const ItemDetail = ({item}) => {
       
     function handleCart(){
         let inProd=-1
-        data.cesta.items.map(
+        let aux = data.cesta.items.map( // eslint-disable-next-line react-hooks/exhaustive-deps
             (ren,i)=>{
                 if(ren.id===item.id) {inProd=i}
+                
             }
         )
 
