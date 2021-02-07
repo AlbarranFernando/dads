@@ -1,4 +1,4 @@
-import './index.css';
+import './Error404.css';
 const Error404 = () => {
     return (
         <div className="e404">

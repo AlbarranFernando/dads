@@ -1,15 +1,15 @@
 import {useState} from 'react';
 
-import './components/global/NavBar/NavBar';
-import NavBar from './components/global/NavBar/NavBar';
-import ProductHomeContainer from './components/global/ProductHomeContainer/ProductHomeContainer'
-import ItemDetailContainer from './components/global/ProductHomeContainer/ItemDetailContainer/ItemDetailContainer'
-import Cart from './components/global/Cart/Cart';
-import CheckOut from './components/global/Cart/CheckOut/CheckOut';
-import Error404 from './components/global/Error404';
+import './components/NavBar/NavBar';
+import NavBar from './components/NavBar/NavBar';
+import ProductHomeContainer from './components/ProductHomeContainer/ProductHomeContainer'
+import ItemDetailContainer from './components/ProductHomeContainer/ItemDetailContainer/ItemDetailContainer'
+import Cart from './components/Cart/Cart';
+import CheckOut from './components/Cart/CheckOut/CheckOut';
+import Error404 from './components/utils/Error404/Error404';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
-import Footer from './components/global/Footer';
-import {CartContext} from './store';
+import Footer from './components/Footer/Footer';
+import {CartContext} from './Store/Store';
 
 function App() {
   const [data, setData] = useState({

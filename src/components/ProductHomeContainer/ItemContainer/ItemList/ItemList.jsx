@@ -1,7 +1,7 @@
 import './ItemList.css'
-import ItemContainer from './ItemContainer/ItemContainer'
+import ItemContainer from '../ItemContainer'
 import  { useState, useEffect } from "react"
-import {getFirestore} from '../../../../db';
+import {getFirestore} from '../../../../Db/Db';
 
 const ItemList = ({catsel="all"}) => {
 

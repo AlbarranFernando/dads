@@ -1,5 +1,5 @@
 import { useContext} from 'react';
-import {CartContext} from '../../../../store';
+import {CartContext} from '../../../Store/Store';
 import { TiShoppingCart } from 'react-icons/ti';
 import './CartWidget.css';
 

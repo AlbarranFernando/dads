@@ -1,6 +1,6 @@
 import {useContext} from 'react';
 import {useHistory} from 'react-router-dom';
-import {CartContext} from '../../../store';
+import {CartContext} from '../../Store/Store';
 import './Cart.css'
 
 const Carrito = () => {

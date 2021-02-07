@@ -1,8 +1,7 @@
 import  { useState, useEffect } from "react"
 import {useParams} from 'react-router-dom';
-import ItemDetail from './ItemDetail'
-//import dadsJson from '../../dadsJson.json';
-import {getFirestore} from '../../../../db';
+import ItemDetail from './ItemDetail/ItemDetail'
+import {getFirestore} from '../../../Db/Db';
 
 const ItemDetailContainer = () => {
 

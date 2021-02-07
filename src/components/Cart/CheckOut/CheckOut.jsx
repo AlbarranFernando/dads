@@ -1,6 +1,6 @@
 import {useState, useContext} from 'react';
-import {CartContext} from '../../../../store';
-import {getFirestore} from '../../../../db';
+import {CartContext} from '../../../Store/Store';
+import {getFirestore} from '../../../Db/Db';
 import './CheckOut.css'
 
 const Checkout = () => {
@@ -79,7 +79,7 @@ return (
                         clientData.email !== clientData.repemail 
                         ?'disable' 
                         : null 
-                        }>Pagar</button>
+                        }>Realizar Compra</button>
                          
                     </div>       
                 </form> :
