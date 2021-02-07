@@ -3,6 +3,7 @@
 _[ESP] Proyecto de e-commerce realizado con React JS  y Firebase :blue_heart:
 
 El Proyecto implementa un e-commerce de productos varios, como los ofrecidos en un negocio tipo drugstore.
+
 El proyecto implementa las siguientes funcionalidades:
 > <li>Un usuario debe poder ingresar, navegar por los productos e ir a sus detalles.
 > <li>Desde el detalle se debe poder ver la descripción, foto y precio e ingresarlo al carrito. 
