@@ -7,7 +7,6 @@ const Checkout = () => {
     
     const [ventOk,setVentOk] = useState(false);
     const [idCompra, setIdCompra] = useState('');
-  //  const [factura, setFactura] = useState[];
     const db = getFirestore();
     const [data, setData] = useContext(CartContext);
     const [clientData, setClientData] = useState({
