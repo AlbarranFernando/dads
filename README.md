@@ -19,7 +19,7 @@ El proyecto implementa las siguientes funcionalidades:
 		\Cart
 			\CheckOut
 		\Footer
-        \NavBar
+		\NavBar
 			\CartWidget
 		\ProductHomeContainer
 			\ItemContainer
